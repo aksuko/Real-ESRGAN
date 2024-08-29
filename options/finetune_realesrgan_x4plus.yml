@@ -98,7 +98,7 @@ network_d:
 # path
 path:
   # use the pre-trained Real-ESRNet model
-  pretrain_network_g: /kaggle/working/RealESRNet_x4plus.pth
+  pretrain_network_g: /kaggle/working/RealESRGAN_x4plus.pth
   param_key_g: params_ema
   strict_load_g: true
   pretrain_network_d: /kaggle/working/RealESRGAN_x4plus_netD.pth
