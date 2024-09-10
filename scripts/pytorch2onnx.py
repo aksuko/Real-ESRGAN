@@ -28,7 +28,7 @@ if __name__ == '__main__':
     """Convert pytorch model to onnx models"""
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        '--input', type=str, default='experiments/pretrained_models/RealESRGAN_x4plus.pth', help='Input model path')
+        '--input', type=str, default='', help='Input model path')
     parser.add_argument('--output', type=str, default='realesrgan-x4.onnx', help='Output onnx path')
     parser.add_argument('--params', action='store_false', help='Use params instead of params_ema')
     args = parser.parse_args()

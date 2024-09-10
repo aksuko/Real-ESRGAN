@@ -8,7 +8,7 @@ def test_realesrganer():
     # initialize with default model
     restorer = RealESRGANer(
         scale=4,
-        model_path='experiments/pretrained_models/RealESRGAN_x4plus.pth',
+        model_path='experiments/pretrained_models/Reus.pth',
         model=None,
         tile=10,
         tile_pad=10,
@@ -20,7 +20,7 @@ def test_realesrganer():
     model = RRDBNet(num_in_ch=3, num_out_ch=3, num_feat=64, num_block=6, num_grow_ch=32, scale=4)
     restorer = RealESRGANer(
         scale=4,
-        model_path='experiments/pretrained_models/RealESRGAN_x4plus_anime_6B.pth',
+        model_path='experiments/pretrained_models/Reme_6B.pth',
         model=model,
         tile=10,
         tile_pad=10,
