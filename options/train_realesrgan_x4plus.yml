@@ -38,8 +38,8 @@ datasets:
   train:
     name: DF2K+OST+Ship
     type: RealESRGANDataset
-    dataroot_gt: kaggle/input/esrgan-planetscope/esrgan-dataset/train
-    meta_info: kaggle/working/meta_info.txt
+    dataroot_gt: /kaggle/input/esrgan-planetscope/esrgan-dataset/train
+    meta_info: /kaggle/working/meta_info.txt
     io_backend:
       type: disk
 
