@@ -30,16 +30,16 @@ poisson_scale_range2: [0.05, 2.5]
 gray_noise_prob2: 0.4
 jpeg_range2: [30, 95]
 
-gt_size: 256
-queue_size: 180
+gt_size: 400
+queue_size: 100
 
 # dataset and data loader settings
 datasets:
   train:
-    name: DF2K+OST
+    name: DF2K+OST+Ship
     type: RealESRGANDataset
-    dataroot_gt: datasets/DF2K
-    meta_info: datasets/DF2K/meta_info/meta_info_DF2Kmultiscale+OST_sub.txt
+    dataroot_gt: /kaggle/input/esrgan-planetscope/esrgan-dataset/train
+    meta_info: /kaggle/working/meta_info.txt
     io_backend:
       type: disk
 
@@ -61,25 +61,25 @@ datasets:
 
     final_sinc_prob: 0.8
 
-    gt_size: 256
+    gt_size: 400
     use_hflip: True
     use_rot: False
 
     # data loader
     use_shuffle: true
     num_worker_per_gpu: 5
-    batch_size_per_gpu: 12
+    batch_size_per_gpu: 6
     dataset_enlarge_ratio: 1
     prefetch_mode: ~
 
   # Uncomment these for validation
-  # val:
-  #   name: validation
-  #   type: PairedImageDataset
-  #   dataroot_gt: path_to_gt
-  #   dataroot_lq: path_to_lq
-  #   io_backend:
-  #     type: disk
+  val:
+    name: validation
+    type: PairedImageDataset
+    dataroot_gt: /kaggle/input/esrgan-planetscope/esrgan-dataset/val_HR
+    dataroot_lq: /kaggle/input/esrgan-planetscope/esrgan-dataset/val_LR
+    io_backend:
+      type: disk
 
 # network structures
 network_g:
@@ -163,15 +163,15 @@ train:
 
 # Uncomment these for validation
 # validation settings
-# val:
-#   val_freq: !!float 5e3
+val:
+  val_freq: !!float 5e3
 #   save_img: True
 
-#   metrics:
-#     psnr: # metric name
-#       type: calculate_psnr
-#       crop_border: 4
-#       test_y_channel: false
+  metrics:
+    psnr: # metric name
+      type: calculate_psnr
+      crop_border: 4
+      test_y_channel: false
 
 # logging settings
 logger:
