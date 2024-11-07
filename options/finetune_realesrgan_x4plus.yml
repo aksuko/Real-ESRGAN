@@ -99,10 +99,10 @@ network_d:
 # path
 path:
   # use the pre-trained Real-ESRNet model
-  pretrain_network_g: experiments/pretrained_models/RealESRNet_x4plus.pth
+  pretrain_network_g: /kaggle/working/RealESRNet_x4plus.pth
   param_key_g: params_ema
   strict_load_g: true
-  pretrain_network_d: experiments/pretrained_models/RealESRGAN_x4plus_netD.pth
+  pretrain_network_d: /kaggle/working/RealESRGAN_x4plus_netD.pth
   param_key_d: params
   strict_load_d: true
   resume_state: ~
@@ -126,7 +126,7 @@ train:
     milestones: [400000]
     gamma: 0.5
 
-  total_iter: 400000
+  total_iter: 100000
   warmup_iter: -1  # no warm up
 
   # losses
