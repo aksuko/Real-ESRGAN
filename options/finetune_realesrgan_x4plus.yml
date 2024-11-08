@@ -73,13 +73,13 @@ datasets:
     prefetch_mode: ~
 
   # Uncomment these for validation
-  val:
-    name: validation
-    type: PairedImageDataset
-    dataroot_gt: /kaggle/input/esrgan-planetscope/esrgan-dataset/val_HR
-    dataroot_lq: /kaggle/input/esrgan-planetscope/esrgan-dataset/val_LR
-    io_backend:
-      type: disk
+#  val:
+ #   name: validation
+ #   type: PairedImageDataset
+ #   dataroot_gt: /kaggle/input/esrgan-planetscope/esrgan-dataset/val_HR
+ #   dataroot_lq: /kaggle/input/esrgan-planetscope/esrgan-dataset/val_LR
+  #  io_backend:
+  #    type: disk
 
 # network structures
 network_g:
@@ -163,12 +163,12 @@ train:
 
 # Uncomment these for validation
 # validation settings
-val:
-  val_freq: !!float 5e3
+#val:
+ # val_freq: !!float 5e3
 #   save_img: True
 
-  metrics:
-    psnr: # metric name
+ # metrics:
+ #   psnr: # metric name
       type: calculate_psnr
       crop_border: 4
       test_y_channel: false
