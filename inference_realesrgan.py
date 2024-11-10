@@ -59,7 +59,7 @@ def main():
     if args.model_name == 'RealESRGAN_x4plus':  # x4 RRDBNet model
         model = RRDBNet(num_in_ch=3, num_out_ch=3, num_feat=64, num_block=23, num_grow_ch=32, scale=4)
         netscale = 4
-        file_url = ['https://web.itu.edu.tr/aksuko/finetune_RealESRGANx4plus_400k/models/net_g_50000.pth']
+        file_url = ['https://web.itu.edu.tr/aksuko/finetune_RealESRGANx4plus_400k/models/net_g_5000.pth']
     elif args.model_name == 'RealESRNet_x4plus':  # x4 RRDBNet model
         model = RRDBNet(num_in_ch=3, num_out_ch=3, num_feat=64, num_block=23, num_grow_ch=32, scale=4)
         netscale = 4
