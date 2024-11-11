@@ -99,10 +99,10 @@ network_d:
 # path
 path:
   # use the pre-trained Real-ESRNet model
-  pretrain_network_g: /kaggle/working/Real-ESRGAN/experiments/finetune_RealESRGANx4plus_400k/models/net_g_100000.pth
+  pretrain_network_g: /kaggle/working/Real-ESRGAN/experiments/finetune_RealESRGANx4plus_400k/models/net_g_130000.pth
   param_key_g: params_ema
   strict_load_g: true
-  pretrain_network_d: //kaggle/working/Real-ESRGAN/experiments/finetune_RealESRGANx4plus_400k/models/net_d_100000.pth
+  pretrain_network_d: //kaggle/working/Real-ESRGAN/experiments/finetune_RealESRGANx4plus_400k/models/net_d_130000.pth
   param_key_d: params
   strict_load_d: true
   resume_state: ~
